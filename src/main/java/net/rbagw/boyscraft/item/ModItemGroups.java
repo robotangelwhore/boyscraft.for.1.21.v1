@@ -17,7 +17,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.boyscraft.boys_recourses"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.TALISMAN);
-                        entries.add(ModItems.Chalk);
+                        entries.add(ModItems.CHALK);
                         entries.add(ModItems.KEY);
                     })
                     .build());
@@ -28,6 +28,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.boyscraft.boys_blocks"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.CHALK_ORE);
+                        entries.add(ModBlocks.SILVER_ORE);
 
                     })
                     .build());
@@ -59,6 +60,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.boyscraft.lust_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.MALE_MASTURBATOR);
+                        entries.add(ModItems.CUM_BOTTLE);
 
                     })
                     .build());
