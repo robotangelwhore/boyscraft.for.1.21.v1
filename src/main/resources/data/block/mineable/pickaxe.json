@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:chalk_ore"
+    "boyscraft:chalk_ore"
+    "boyscraft:silver_ore"
   ]
 }

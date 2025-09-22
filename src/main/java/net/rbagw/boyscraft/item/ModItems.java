@@ -15,6 +15,8 @@ public class ModItems {
     public static final Item KEY = registerItem("key", new Item(new Item.Settings()));
     public static final Item Chalk = registerItem("chalk", new Item(new Item.Settings()));
     public static final Item MALE_MASTURBATOR = registerItem("male_masturbator", new MasturbatorItem(new Item.Settings()));
+    public static final Item RAW_SILVER = registerItem("raw_silver", new Item(new Item.Settings()));
+    public static final Item SILVER_INGOT = registerItem("silver_ingot", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Boyscraft.MOD_ID, name), item);
@@ -22,9 +24,5 @@ public class ModItems {
 
     public static void registerModItems() {
         Boyscraft.LOGGER.info("Registering Mod Items For" + Boyscraft.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add((TALISMAN));
-                });
     }
 }

@@ -48,6 +48,8 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.boyscraft.forge_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.KEY);
+                        entries.add(ModItems.RAW_SILVER);
+                        entries.add(ModItems.SILVER_INGOT);
                     })
                     .build());
 
