@@ -33,17 +33,17 @@ public class ModItemGroups {
                     .build());
 
     public static final ItemGroup BOYS_ARMOUR_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Boyscraft.MOD_ID, "boys_recourses"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.CHASTITY_CAGE)) //not implemented yet
+            Identifier.of(Boyscraft.MOD_ID, "boys_armour"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.CHASTITY_CAGE))
                     .displayName(Text.translatable("itemgroup.boyscraft.boys_armour"))
                     .entries((displayContext, entries) -> {
-                        entries.add((ModItems.CHASTITY_CAGE)); //not implemented yet
+                        entries.add((ModItems.CHASTITY_CAGE));
 
                     })
                     .build());
 
     public static final ItemGroup FORGE_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Boyscraft.MOD_ID, "boys_recourses"),
+            Identifier.of(Boyscraft.MOD_ID, "forge_items"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.KEY))
                     .displayName(Text.translatable("itemgroup.boyscraft.forge_items"))
                     .entries((displayContext, entries) -> {
@@ -54,7 +54,7 @@ public class ModItemGroups {
                     .build());
 
     public static final ItemGroup LUST_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Boyscraft.MOD_ID, "boys_recourses"),
+            Identifier.of(Boyscraft.MOD_ID, "lust_items"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.MALE_MASTURBATOR))
                     .displayName(Text.translatable("itemgroup.boyscraft.lust_items"))
                     .entries((displayContext, entries) -> {
