@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "boyscraft",
+	"version": "${version}",
+	"name": "boyscraft",
+	"description": "This minecraft mod is the perverted version of a mod I've designed to add more progression to minecraft",
+	"authors": [
+		"Mostly RobotAngelWhore. Though assistance through YT tutorials, reddit, and strangers on discord cannot be understated"
+	],
+	"contact": {
+		"homepage": "https://github.com/robotangelwhore",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/boyscraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.rbagw.boyscraft.Boyscraft"
+		],
+		"fabric-datagen": [
+			"net.rbagw.boyscraft.BoyscraftDataGenerator"
+		],
+      "client": [
+        "net.rbagw.boyscraft.BoyscraftClient"
+      ]
+	},
+	"mixins": [
+		"boyscraft.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
