@@ -7,7 +7,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.rbagw.boyscraft.Boyscraft;
 import net.rbagw.boyscraft.item.custom.MasturbatorItem;
-import net.rbagw.boyscraft.item.custom.ModArmorMaterials;
 
 public class ModItems {
 
@@ -24,10 +23,9 @@ public class ModItems {
     public static void registerModItems() {
         Boyscraft.LOGGER.info("Registering Mod Items for " + Boyscraft.MOD_ID);
 
-        ModArmorMaterials.register();
 
         CHASTITY_CAGE = registerItem("chastity_cage",
-                new ArmorItem(ModArmorMaterials.SILVER_INGOT_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()));
+                new ArmorItem(net.rbagw.boyscraft.item.ModArmorMaterials.SILVER_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     }
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Boyscraft.MOD_ID, name), item);
