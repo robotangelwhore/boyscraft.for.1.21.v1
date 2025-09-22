@@ -14,7 +14,6 @@ import net.rbagw.boyscraft.item.ModItems;
 
 import java.util.EnumMap;
 import java.util.List;
-import java.util.function.Supplier;
 
 public class ModArmorMaterials {
 

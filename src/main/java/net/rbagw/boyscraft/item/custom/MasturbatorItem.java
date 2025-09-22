@@ -53,7 +53,7 @@ public class MasturbatorItem extends Item {
             player.playSound(SoundEvents.ITEM_SPYGLASS_STOP_USING, 1.0F, 1.0F);
         }
 
-        return stack; //
+        return stack;
     }
 
     @Override
