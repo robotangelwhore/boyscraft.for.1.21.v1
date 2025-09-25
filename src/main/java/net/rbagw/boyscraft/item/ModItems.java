@@ -23,9 +23,9 @@ public class ModItems {
     public static void registerModItems() {
         Boyscraft.LOGGER.info("Registering Mod Items for " + Boyscraft.MOD_ID);
 
-
         CHASTITY_CAGE = registerItem("chastity_cage",
                 new ArmorItem(net.rbagw.boyscraft.item.ModArmorMaterials.SILVER_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()));
+
     }
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Boyscraft.MOD_ID, name), item);

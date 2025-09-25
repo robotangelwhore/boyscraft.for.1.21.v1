@@ -10,7 +10,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import net.rbagw.boyscraft.Boyscraft;
-import net.rbagw.boyscraft.item.ModItems;
 
 import java.util.EnumMap;
 import java.util.List;

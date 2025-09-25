@@ -12,9 +12,9 @@ import net.rbagw.boyscraft.block.ModBlocks;
 
 public class ModItemGroups {
     public static final ItemGroup BOYS_RESOURCES_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Boyscraft.MOD_ID, "boys_recourses"),
+            Identifier.of(Boyscraft.MOD_ID, "boys_resources"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.TALISMAN))
-                    .displayName(Text.translatable("itemgroup.boyscraft.boys_recourses"))
+                    .displayName(Text.translatable("itemgroup.boyscraft.boys_resources"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.TALISMAN);
                         entries.add(ModItems.CHALK);

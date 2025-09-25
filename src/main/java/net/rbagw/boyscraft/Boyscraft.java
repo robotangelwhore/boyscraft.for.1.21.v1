@@ -2,6 +2,7 @@ package net.rbagw.boyscraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.rbagw.boyscraft.block.ModBlocks;
 import net.rbagw.boyscraft.item.ModItemGroups;
 import net.rbagw.boyscraft.item.ModItems;
 import org.slf4j.Logger;
@@ -15,6 +16,7 @@ public class Boyscraft implements ModInitializer {
 	public void onInitialize() {
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
 
 	}
 }
