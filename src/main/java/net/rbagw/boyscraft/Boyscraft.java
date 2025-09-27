@@ -2,6 +2,8 @@ package net.rbagw.boyscraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.world.gen.feature.OreFeature;
 import net.rbagw.boyscraft.block.ModBlocks;
 import net.rbagw.boyscraft.item.ModItemGroups;
 import net.rbagw.boyscraft.item.ModItems;
@@ -17,6 +19,6 @@ public class Boyscraft implements ModInitializer {
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
-
+        FuelRegistry.INSTANCE.add(ModItems.SILVER_PETAL, 2000);
 	}
 }

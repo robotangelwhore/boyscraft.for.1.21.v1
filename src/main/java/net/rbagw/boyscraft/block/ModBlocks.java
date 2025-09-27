@@ -21,6 +21,8 @@ public class ModBlocks {
     public static final Block SILVER_ORE = registerBlock("silver_ore",
             new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
 
+    public static final Block SILVER_BLOCK = registerBlock("silver_block", new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.METAL)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Boyscraft.MOD_ID, name), block);

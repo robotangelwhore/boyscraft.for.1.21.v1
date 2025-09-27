@@ -19,6 +19,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TALISMAN);
                         entries.add(ModItems.CHALK);
                         entries.add(ModItems.KEY);
+                        entries.add(ModItems.SILVER_PETAL);
                     })
                     .build());
 
@@ -29,6 +30,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.CHALK_ORE);
                         entries.add(ModBlocks.SILVER_ORE);
+                        entries.add(ModBlocks.SILVER_BLOCK);
 
                     })
                     .build());
@@ -61,6 +63,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.MALE_MASTURBATOR);
                         entries.add(ModItems.CUM_BOTTLE);
+                        entries.add(ModItems.SILVER_PETAL);
 
                     })
                     .build());

@@ -18,6 +18,8 @@ public class ModItems {
     public static final Item SILVER_INGOT = registerItem("silver_ingot", new Item(new Item.Settings()));
     public static final Item CUM_BOTTLE = registerItem("cum_bottle", new Item(new Item.Settings().food(ModFoodComponents.CUM_BOTTLE)));
 
+    public static final Item SILVER_PETAL = registerItem("silver_petal", new Item(new Item.Settings()));
+
     public static Item CHASTITY_CAGE;
 
     public static void registerModItems() {
