@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.rbagw.boyscraft.block.ModBlocks;
@@ -28,12 +29,29 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT, 0.7f, 200, "silver_ingot");
         offerBlasting(exporter, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT, 0.7f, 100, "silver_ingot");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SILVER_INGOT, RecipeCategory.DECORATIONS, ModBlocks.SILVER_BLOCK);
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SILVER_BLOCK)
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
+                .input('S', ModItems.SILVER_INGOT)
+                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TALISMAN)
+                .pattern("   ")
+                .pattern("CPR")
+                .pattern("   ")
+                .input('P', Items.PAPER)
+                .input('R', Items.REDSTONE)
+                .input('C', ModItems.CHALK)
+                .criterion(hasItem(ModItems.CHALK), conditionsFromItem(ModItems.CHALK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.KEY)
+                .pattern(" G ")
+                .pattern(" G ")
+                .pattern(" S ")
+                .input('G', Items.GOLD_INGOT)
                 .input('S', ModItems.SILVER_INGOT)
                 .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
                 .offerTo(exporter);
