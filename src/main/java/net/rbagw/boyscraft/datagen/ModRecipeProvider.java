@@ -56,5 +56,46 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_HELMET)
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("   ")
+                .input('S', ModItems.SILVER_INGOT)
+                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_CHESTPLATE)
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .input('S', ModItems.SILVER_INGOT)
+                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHASTITY_CAGE)
+                .pattern("   ")
+                .pattern("SSS")
+                .pattern(" S ")
+                .input('S', ModItems.SILVER_INGOT)
+                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_BOOTS)
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("S S")
+                .input('S', ModItems.SILVER_INGOT)
+                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ARMOR_PLATE)
+                .pattern("OSO")
+                .pattern("OSO")
+                .pattern("OSO")
+                .input('O', Items.OBSIDIAN)
+                .input('S', ModItems.SILVER_INGOT)
+                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
+                .offerTo(exporter);
+
     }
 }

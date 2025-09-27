@@ -29,8 +29,10 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.boyscraft.boys_blocks"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.CHALK_ORE);
+                        entries.add(ModBlocks.CHALK_BLOCK);
                         entries.add(ModBlocks.SILVER_ORE);
                         entries.add(ModBlocks.SILVER_BLOCK);
+                        entries.add(ModBlocks.LUXURIA_NYMPHAEA);
 
                     })
                     .build());
@@ -38,9 +40,13 @@ public class ModItemGroups {
     public static final ItemGroup BOYS_ARMOUR_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Boyscraft.MOD_ID, "boys_armour"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.CHASTITY_CAGE))
-                    .displayName(Text.translatable("itemgroup.boyscraft.boys_armour"))
+                    .displayName(Text.translatable("itemgroup.boyscraft.boys_armor"))
                     .entries((displayContext, entries) -> {
-                        entries.add((ModItems.CHASTITY_CAGE));
+                        entries.add(ModItems.SILVER_HELMET);
+                        entries.add(ModItems.SILVER_CHESTPLATE);
+                        entries.add(ModItems.CHASTITY_CAGE);
+                        entries.add(ModItems.SILVER_BOOTS);
+                        entries.add(ModItems.ARMOR_PLATE);
 
                     })
                     .build());

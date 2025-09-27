@@ -6,17 +6,23 @@
   "item.boyscraft.silver_ingot": "Silver Ingot",
   "item.boyscraft.raw_silver": "Raw Silver",
   "item.boyscraft.cum_bottle": "Cum Bottle",
-  "item.boyscraft.silver_petal": "Silver Petal",
+  "item.boyscraft.silver_petal": "Enchanted Petal",
+  "item.boyscraft.armor_plate": "Armour Plate",
 
   "block.boyscraft.chalk_ore": "Chalk Ore",
+  "block.boyscraft.chalk_block": "Chalk Block",
   "block.boyscraft.silver_ore": "Silver Ore",
   "block.boyscraft.silver_block": "Silver Block",
+  "block.boyscraft.luxuria_nymphaea": "Luxuria Nymphaea",
 
+  "item.boyscraft.silver_helmet": "Silver Helmet",
+  "item.boyscraft.silver_chestplate": "Silver Chestplate",
   "item.boyscraft.chastity_cage": "Chastity Cage",
+  "item.boyscraft.silver_boots": "Silver Boots",
 
   "itemgroup.boyscraft.boys_resources": "Boys Resources",
   "itemgroup.boyscraft.boys_blocks": "Boys Blocks",
-  "itemgroup.boyscraft.boys_armour": "Boys Armour",
+  "itemgroup.boyscraft.boys_armor": "Boys Armour",
   "itemgroup.boyscraft.forge_items": "Forge Items",
   "itemgroup.boyscraft.lust_items": "Lust Items"
 }

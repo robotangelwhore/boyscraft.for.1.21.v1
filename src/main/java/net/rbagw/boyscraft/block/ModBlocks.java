@@ -11,6 +11,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.rbagw.boyscraft.Boyscraft;
+import net.rbagw.boyscraft.block.custom.LuxuriaNymphaeaBlock;
 
 public class ModBlocks {
 
@@ -22,6 +23,10 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
 
     public static final Block SILVER_BLOCK = registerBlock("silver_block", new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.METAL)));
+
+    public static final Block CHALK_BLOCK = registerBlock("chalk_block", new Block(AbstractBlock.Settings.create().strength(1.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)));
+
+    public static final Block LUXURIA_NYMPHAEA = registerBlock("luxuria_nymphaea",new LuxuriaNymphaeaBlock(AbstractBlock.Settings.create().nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
