@@ -17,32 +17,44 @@ import net.rbagw.boyscraft.Boyscraft;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = registerKey("silver_ore_placed");
-    public static final RegistryKey<PlacedFeature> CHALK_ORE_PLACED_KEY = registerKey("chalk_ore_placed");
 
+    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = registerKey("silver_ore");
+    public static final RegistryKey<PlacedFeature> CHALK_ORE_PLACED_KEY = registerKey("chalk_ore");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, SILVER_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SILVER_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(9,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(8), YOffset.fixed(250))));
+                ModOrePlacement.modifiersWithCount(
+                        9,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(8), YOffset.fixed(250))
+                )
+        );
 
         register(context, CHALK_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CHALK_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(12,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(24), YOffset.fixed(300))));
+                ModOrePlacement.modifiersWithCount(
+                        12,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(24), YOffset.fixed(250))
+                )
+        );
     }
 
-    public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(Boyscraft.MOD_ID, name));
+    private static RegistryKey<PlacedFeature> registerKey(String name) {
+        return RegistryKey.of(
+                RegistryKeys.PLACED_FEATURE,
+                Identifier.of(Boyscraft.MOD_ID, name)
+        );
     }
 
-    private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,
+    private static void register(Registerable<PlacedFeature> context,
+                                 RegistryKey<PlacedFeature> key,
+                                 RegistryEntry<ConfiguredFeature<?, ?>> configuration,
                                  List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 
-    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key,
+    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<PlacedFeature> context,
+                                                                                   RegistryKey<PlacedFeature> key,
                                                                                    RegistryEntry<ConfiguredFeature<?, ?>> configuration,
                                                                                    PlacementModifier... modifiers) {
         register(context, key, configuration, List.of(modifiers));

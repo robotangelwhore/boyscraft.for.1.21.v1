@@ -19,6 +19,7 @@ import net.rbagw.boyscraft.block.ModBlocks;
 import java.util.List;
 
 public class ModConfiguredFeatures {
+
     public static final RegistryKey<ConfiguredFeature<?, ?>> SILVER_ORE_KEY = registerKey("silver_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CHALK_ORE_KEY = registerKey("chalk_ore");
 
@@ -28,14 +29,15 @@ public class ModConfiguredFeatures {
         RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
         RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
-        List<OreFeatureConfig.Target> overworldSilverOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.SILVER_ORE.getDefaultState()));
-        List<OreFeatureConfig.Target> overworldChalkOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.CHALK_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> overworldSilverOres = List.of(
+                OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.SILVER_ORE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> overworldChalkOres = List.of(
+                OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.CHALK_ORE.getDefaultState())
+        );
 
         register(context, SILVER_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldSilverOres, 7));
         register(context, CHALK_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldChalkOres, 12));
-
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
@@ -46,5 +48,4 @@ public class ModConfiguredFeatures {
                                                                                    RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
-
 }

@@ -9,14 +9,16 @@ import net.rbagw.boyscraft.world.ModConfiguredFeatures;
 import net.rbagw.boyscraft.world.ModPlacedFeatures;
 
 public class BoyscraftDataGenerator implements DataGeneratorEntrypoint {
-	@Override
-	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+    @Override
+    public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
+
         pack.addProvider(ModBlockTagProvider::new);
         pack.addProvider(ModLootTableProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModRecipeProvider::new);
-	}
+        pack.addProvider(ModRegistryDataGenerator::new);
+    }
 
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder) {
