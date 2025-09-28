@@ -1,8 +1,9 @@
 package net.rbagw.boyscraft.block;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -26,7 +27,21 @@ public class ModBlocks {
 
     public static final Block CHALK_BLOCK = registerBlock("chalk_block", new Block(AbstractBlock.Settings.create().strength(1.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)));
 
-    public static final Block LUXURIA_NYMPHAEA = registerBlock("luxuria_nymphaea",new LuxuriaNymphaeaBlock(AbstractBlock.Settings.create().nonOpaque()));
+    public static final Block LUXURIA_NYMPHAEA = registerBlock(
+            "luxuria_nymphaea",
+            new FlowerBlock(
+                    StatusEffects.STRENGTH,
+                    8.0F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .nonOpaque()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

@@ -1,10 +1,7 @@
 package net.rbagw.boyscraft.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.math.BlockPos;
@@ -12,9 +9,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.Nullable;
 
-public class LuxuriaNymphaeaBlock extends HorizontalFacingBlock {
+public class LuxuriaNymphaeaBlock extends PlantBlock {
     public static final MapCodec<LuxuriaNymphaeaBlock> CODEC = createCodec(LuxuriaNymphaeaBlock::new);
-    private static final VoxelShape SHAPE = Block.createCuboidShape(3.0, 0.0,3.0,10.0,5.0,10.0);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(8, 2.5,8,8,2.5,8);
 
     public LuxuriaNymphaeaBlock(Settings settings) {
         super(settings);
@@ -26,17 +23,17 @@ public class LuxuriaNymphaeaBlock extends HorizontalFacingBlock {
     }
 
     @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
+    protected MapCodec<? extends PlantBlock> getCodec() {
         return CODEC;
     }
 
     @Override
     public @Nullable BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+        return this.getDefaultState();
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-       builder.add(FACING);
+
     }
 }
