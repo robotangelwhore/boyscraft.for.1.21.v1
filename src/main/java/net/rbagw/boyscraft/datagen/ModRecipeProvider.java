@@ -97,5 +97,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_PETAL)
+                .pattern("   ")
+                .pattern(" AS")
+                .pattern("   ")
+                .input('A', Items.ALLIUM)
+                .input('S', ModItems.SILVER_INGOT)
+                .criterion(hasItem(ModItems.SILVER_INGOT), conditionsFromItem(ModItems.SILVER_INGOT))
+                .offerTo(exporter);
+
     }
 }

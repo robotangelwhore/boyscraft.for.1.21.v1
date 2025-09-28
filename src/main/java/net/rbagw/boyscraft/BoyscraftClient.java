@@ -9,8 +9,5 @@ public class BoyscraftClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LUXURIA_NYMPHAEA, RenderLayer.getCutout());
-
-
     }
 }

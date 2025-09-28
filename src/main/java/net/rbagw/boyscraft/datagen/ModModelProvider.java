@@ -7,6 +7,7 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
 import net.rbagw.boyscraft.block.ModBlocks;
+
 import net.rbagw.boyscraft.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -20,9 +21,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SILVER_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SILVER_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHALK_BLOCK);
-
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.LUXURIA_NYMPHAEA);
-
 
     }
 

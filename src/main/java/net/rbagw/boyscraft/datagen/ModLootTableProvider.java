@@ -29,6 +29,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHALK_ORE, multipleOreDrops(ModBlocks.CHALK_ORE, ModItems.CHALK, 2, 5));
         addDrop(ModBlocks.SILVER_ORE, multipleOreDrops(ModBlocks.SILVER_ORE, ModItems.RAW_SILVER, 1, 3));
         addDrop(ModBlocks.SILVER_BLOCK);
+        addDrop(ModBlocks.CHALK_BLOCK);
 
     }
 

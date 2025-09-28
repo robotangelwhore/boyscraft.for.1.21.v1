@@ -19,29 +19,11 @@ public class ModBlocks {
     public static final Block CHALK_ORE = registerBlock("chalk_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
                     AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
-
     public static final Block SILVER_ORE = registerBlock("silver_ore",
             new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
 
     public static final Block SILVER_BLOCK = registerBlock("silver_block", new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.METAL)));
-
     public static final Block CHALK_BLOCK = registerBlock("chalk_block", new Block(AbstractBlock.Settings.create().strength(1.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)));
-
-    public static final Block LUXURIA_NYMPHAEA = registerBlock(
-            "luxuria_nymphaea",
-            new FlowerBlock(
-                    StatusEffects.STRENGTH,
-                    8.0F,
-                    AbstractBlock.Settings.create()
-                            .mapColor(MapColor.DARK_GREEN)
-                            .noCollision()
-                            .nonOpaque()
-                            .breakInstantly()
-                            .sounds(BlockSoundGroup.GRASS)
-                            .offset(AbstractBlock.OffsetType.XZ)
-                            .pistonBehavior(PistonBehavior.DESTROY)
-            )
-    );
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

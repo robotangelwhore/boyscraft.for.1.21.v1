@@ -32,7 +32,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHALK_BLOCK);
                         entries.add(ModBlocks.SILVER_ORE);
                         entries.add(ModBlocks.SILVER_BLOCK);
-                        entries.add(ModBlocks.LUXURIA_NYMPHAEA);
 
                     })
                     .build());
